@@ -1,0 +1,20 @@
+{
+  "ItemGroup.lukelecraftTab": "LukeleCraft",
+
+  "item.lukelecraft.ruby": "Ruby",
+
+  "item.lukelecraft.ruby_sword": "Ruby Sword",
+
+  "item.lukelecraft.ruby_helmet": "Ruby Helmet",
+  "item.lukelecraft.ruby_chestplate": "Ruby Chestplate",
+  "item.lukelecraft.ruby_leggings": "Ruby Leggings",
+  "item.lukelecraft.ruby_boots": "Ruby Boots",
+
+
+  "block.lukelecraft.bit_block": "Block of Bit",
+  "block.lukelecraft.ruby_block": "Block of Ruby",
+
+
+  "entity.lukelecraft.test": "Test",
+  "entity.lukelecraft.evil": "Evil"
+}

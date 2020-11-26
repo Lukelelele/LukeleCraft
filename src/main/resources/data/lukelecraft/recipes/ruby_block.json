@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lukelecraft:ruby"
+    },
+    {
+      "item": "lukelecraft:ruby"
+    },
+    {
+      "item": "lukelecraft:ruby"
+    },
+    {
+      "item": "lukelecraft:ruby"
+    }
+  ],
+  "result":
+  {
+    "item": "lukelecraft:ruby_block",
+    "count": 1
+  }
+}
