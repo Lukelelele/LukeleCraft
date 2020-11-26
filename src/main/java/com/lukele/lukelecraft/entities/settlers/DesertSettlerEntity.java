@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
@@ -38,7 +39,9 @@ public class DesertSettlerEntity extends VillagerEntity {
         return MobEntity.registerAttributes()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 12.9f)
                 .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE,12.90)
+                .createMutableAttribute(Attributes.FOLLOW_RANGE, 0.0)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.15);
+
     }
 
     @Override
