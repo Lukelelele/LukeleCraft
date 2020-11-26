@@ -35,7 +35,7 @@ public class DesertSettlerEntity extends VillagerEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes(){
-        return VillagerEntity.registerAttributes()
+        return MobEntity.registerAttributes()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 12.9f)
                 .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE,12.90)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.15);

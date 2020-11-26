@@ -4,6 +4,7 @@ import com.lukele.lukelecraft.entities.settlers.DesertSettlerEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
+import net.minecraft.client.renderer.entity.model.VillagerModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.util.math.MathHelper;
 
@@ -16,6 +17,7 @@ private final ModelRenderer rightLeg;
 private final ModelRenderer arms;
 
 public DesertSettlerModel() {
+        //super();
         textureWidth = 64;
         textureHeight = 64;
 
@@ -28,7 +30,7 @@ public DesertSettlerModel() {
         nose.setTextureOffset(24, 0).addBox(-1.0F, -1.0F, -2.0F, 2.0F, 4.0F, 2.0F, 0.0F, true);
 
         body = new ModelRenderer(this);
-        body.setRotationPoint(0.0F, 7.0F, 0.0F);
+        //body.setRotationPoint(0.0F, 7.0F, 0.0F);
         body.setTextureOffset(16, 20).addBox(-4.0F, -7.0F, -3.0F, 8.0F, 12.0F, 6.0F, 0.0F, true);
         body.setTextureOffset(0, 38).addBox(-4.0F, -7.0F, -3.0F, 8.0F, 18.0F, 6.0F, 0.5F, true);
 
@@ -73,7 +75,7 @@ public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, floa
     public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
             this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
-            this.body.rotateAngleX = ((float)Math.PI / 2F);
+            //this.body.rotateAngleX = ((float)Math.PI / 2F);
             this.rightLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
             this.leftLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
             this.arms.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;

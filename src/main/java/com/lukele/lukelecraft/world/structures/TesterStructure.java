@@ -60,7 +60,7 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
     @Override
     public GenerationStage.Decoration getDecorationStage() {
         return GenerationStage.Decoration.SURFACE_STRUCTURES;
-    }
+    }   //SURFACE_STRUCTURES
 
 
   /**
@@ -77,7 +77,7 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
      *       use the StructureSpawnListGatherEvent to add water_creatures, water_ambient,
      *       ambient, or misc mobs. Use that event to add/remove mobs from structures
      *       that are not your own.
-*/
+
     private static final List<MobSpawnInfo.Spawners> STRUCTURE_MONSTERS = ImmutableList.of(
             new MobSpawnInfo.Spawners(EntityType.ILLUSIONER, 100, 4, 9),
             new MobSpawnInfo.Spawners(EntityType.VINDICATOR, 100, 4, 9)
@@ -95,7 +95,7 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
     public List<MobSpawnInfo.Spawners> getDefaultCreatureSpawnList() {
         return STRUCTURE_CREATURES;
     }
-
+*/
 
     /*
      * This is where extra checks can be done to determine if the structure can spawn here.
@@ -120,11 +120,11 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
      * If you check for the dimension there and do not add your structure's
      * spacing into the chunk generator, the structure will not spawn in that dimension!
      */
- // @Override
- //  protected boolean func_230363_a_(ChunkGenerator chunkGenerator, BiomeProvider biomeSource, long seed, SharedSeedRandom chunkRandom, int chunkX, int chunkZ, Biome biome, ChunkPos chunkPos, NoFeatureConfig featureConfig) {
- //       int landHeight = chunkGenerator.getNoiseHeight(chunkX << 4, chunkZ << 4, Heightmap.Type.WORLD_SURFACE_WG);
- //       return landHeight > 100;
- //   }
+  @Override
+   protected boolean func_230363_a_(ChunkGenerator chunkGenerator, BiomeProvider biomeSource, long seed, SharedSeedRandom chunkRandom, int chunkX, int chunkZ, Biome biome, ChunkPos chunkPos, NoFeatureConfig featureConfig) {
+        int landHeight = chunkGenerator.getNoiseHeight(chunkX << 4, chunkZ << 4, Heightmap.Type.WORLD_SURFACE_WG);
+        return landHeight > 50; //100
+    }
 
 
     /**
@@ -140,13 +140,13 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
 
         }
 
-        //@Override
+        @Override
         public void func_230364_a_(DynamicRegistries dynamicRegistryManager, ChunkGenerator chunkGenerator, TemplateManager templateManagerIn, int chunkX, int chunkZ, Biome biomeIn, NoFeatureConfig config) {
 
             // Turns the chunk coordinates into actual coordinates we can use. (Gets center of that chunk)
             int x = (chunkX << 4) + 7;
             int z = (chunkZ << 4) + 7;
-            BlockPos blockpos = new BlockPos(x, 0, z);
+            BlockPos blockpos = new BlockPos(x, 1, z); //y1
 
             // All a structure has to do is call this method to turn it into a jigsaw based structure! JIGSAW CODE
 
@@ -154,12 +154,12 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
                     dynamicRegistryManager,
                     new VillageConfig(() -> dynamicRegistryManager.getRegistry(Registry.JIGSAW_POOL_KEY)
                             // The path to the starting Template Pool JSON file to read.
-                            .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "template_pool/start_pool.json")), //"tester/start_pool
-
+                            .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "start_pool")),
+//                          .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "start_pool")),
                             // How many pieces outward from center can a recursive jigsaw structure spawn.
                             // Our structure is only 1 block out and isn't recursive so any value of 1 or more doesn't change anything.
                             // However, I recommend you keep this a high value so people can use datapacks to add additional pieces to your structure easily.
-                            50),
+                            1),
                     AbstractVillagePiece::new,
                     chunkGenerator,
                     templateManagerIn,
@@ -188,7 +188,9 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
             this.recalculateStructureSize();
 
             // I use to debug and quickly find out if the structure is spawning or not and where it is.
-            LukeleCraftMain.LOGGER.log(Level.DEBUG, "Here is your structure: " + (blockpos.getX()) + " " + blockpos.getY() + " " + (blockpos.getZ()));
+            if(this.components.size() > 0) LukeleCraftMain.LOGGER.log(Level.DEBUG, "Here is your structure: " +
+                    this.components.get(0).getBoundingBox().minX + " " + this.components.get(0).getBoundingBox().minY + " " + this.components.get(0).getBoundingBox().minZ);
+            //LukeleCraftMain.LOGGER.log(Level.DEBUG, "Here is your structure: " + (blockpos.getX()) + " " + blockpos.getY() + " " + (blockpos.getZ()));
         }
 
     }

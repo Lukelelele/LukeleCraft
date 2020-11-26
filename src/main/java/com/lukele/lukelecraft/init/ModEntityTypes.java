@@ -29,9 +29,9 @@ public class ModEntityTypes {
                     .build(new ResourceLocation(LukeleCraftMain.MOD_ID, "evil").toString()));
 
     //Villager Mob
-public static final RegistryObject<EntityType<DesertSettlerEntity>> DESERT_SETTLER = ENTITY_TYPES.register("desertsettler",
+public static final RegistryObject<EntityType<DesertSettlerEntity>> DESERTSETTLER = ENTITY_TYPES.register("desertsettler",
             ()-> EntityType.Builder.create(DesertSettlerEntity::new, EntityClassification.CREATURE)
                 .size(1.0f, 5.0f)
-                .build(new ResourceLocation(LukeleCraftMain.MOD_ID, "desert_settler").toString()));
+                .build(new ResourceLocation(LukeleCraftMain.MOD_ID, "desertsettler").toString()));
 
 }

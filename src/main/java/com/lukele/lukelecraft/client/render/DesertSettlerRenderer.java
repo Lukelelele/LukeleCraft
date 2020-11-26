@@ -15,7 +15,7 @@ public class DesertSettlerRenderer extends MobRenderer<DesertSettlerEntity, Dese
     protected  static final ResourceLocation TEXTURE = new ResourceLocation(LukeleCraftMain.MOD_ID, "textures/entity/desertsettler.png");
 
     public DesertSettlerRenderer(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new DesertSettlerModel(), 0.7f);
+        super(renderManagerIn, new DesertSettlerModel<>(), 0.7f);
     }
 
     @Override

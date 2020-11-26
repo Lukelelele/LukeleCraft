@@ -2,6 +2,7 @@ package com.lukele.lukelecraft;
 
 
 import com.lukele.lukelecraft.entities.experimental.TestEntity;
+import com.lukele.lukelecraft.entities.settlers.DesertSettlerEntity;
 import com.lukele.lukelecraft.init.ModBlocks;
 import com.lukele.lukelecraft.init.ModEntityTypes;
 import com.lukele.lukelecraft.init.ModItems;
@@ -69,6 +70,7 @@ public class LukeleCraftMain
         DeferredWorkQueue.runLater(() -> {
             GlobalEntityTypeAttributes.put(ModEntityTypes.TEST.get(), TestEntity.setCustomAttributes().create());
             GlobalEntityTypeAttributes.put(ModEntityTypes.EVIL.get(), TestEntity.setCustomAttributes().create());
+            GlobalEntityTypeAttributes.put(ModEntityTypes.DESERTSETTLER.get(), DesertSettlerEntity.setCustomAttributes().create());
         });
         //Structures
         event.enqueueWork(() -> {

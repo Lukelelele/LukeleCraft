@@ -19,7 +19,7 @@ public class ClientEventBusSubscriber {
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.TEST.get(), TestRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.EVIL.get(), EvilRenderer::new);
 
-        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.DESERT_SETTLER.get(), DesertSettlerRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.DESERTSETTLER.get(), DesertSettlerRenderer::new);
     }
 
 
