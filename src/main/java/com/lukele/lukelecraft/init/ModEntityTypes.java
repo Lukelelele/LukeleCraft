@@ -1,8 +1,9 @@
 package com.lukele.lukelecraft.init;
 
 import com.lukele.lukelecraft.LukeleCraftMain;
-import com.lukele.lukelecraft.entities.EvilEntity;
-import com.lukele.lukelecraft.entities.TestEntity;
+import com.lukele.lukelecraft.entities.experimental.EvilEntity;
+import com.lukele.lukelecraft.entities.experimental.TestEntity;
+import com.lukele.lukelecraft.entities.settlers.DesertSettlerEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
@@ -26,5 +27,11 @@ public class ModEntityTypes {
             () -> EntityType.Builder.create(EvilEntity::new, EntityClassification.CREATURE)
                     .size(1.0f, 5.0f)
                     .build(new ResourceLocation(LukeleCraftMain.MOD_ID, "evil").toString()));
+
+    //Villager Mob
+public static final RegistryObject<EntityType<DesertSettlerEntity>> DESERT_SETTLER = ENTITY_TYPES.register("desertsettler",
+            ()-> EntityType.Builder.create(DesertSettlerEntity::new, EntityClassification.CREATURE)
+                .size(1.0f, 5.0f)
+                .build(new ResourceLocation(LukeleCraftMain.MOD_ID, "desert_settler").toString()));
 
 }

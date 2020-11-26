@@ -1,7 +1,7 @@
 package com.lukele.lukelecraft;
 
 
-import com.lukele.lukelecraft.entities.TestEntity;
+import com.lukele.lukelecraft.entities.experimental.TestEntity;
 import com.lukele.lukelecraft.init.ModBlocks;
 import com.lukele.lukelecraft.init.ModEntityTypes;
 import com.lukele.lukelecraft.init.ModItems;

@@ -1,8 +1,8 @@
-package com.lukele.lukelecraft.client.render;
+package com.lukele.lukelecraft.client.render.experimental;
 
 import com.lukele.lukelecraft.LukeleCraftMain;
-import com.lukele.lukelecraft.client.model.EvilModel;
-import com.lukele.lukelecraft.entities.EvilEntity;
+import com.lukele.lukelecraft.client.model.experimental.EvilModel;
+import com.lukele.lukelecraft.entities.experimental.EvilEntity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;

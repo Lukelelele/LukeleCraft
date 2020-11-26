@@ -129,18 +129,18 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
 
     /**
      * Handles calling up the structure's pieces class and height that structure will spawn at.
-     */
+*/
     public static class Start extends StructureStart<NoFeatureConfig>  {
         public Start(Structure<NoFeatureConfig> structureIn, int chunkX, int chunkZ, MutableBoundingBox mutableBoundingBox, int referenceIn, long seedIn) {
             super(structureIn, chunkX, chunkZ, mutableBoundingBox, referenceIn, seedIn);
         }
 
         //@Override
-//        public void func_230364_a_(ChunkGenerator p_230364_1_, TemplateManager p_230364_2_, int p_230364_3_, int p_230364_4_, Biome p_230364_5_, NoFeatureConfig p_230364_6_) {
-//
-//        }
+        public void func_230364_a_(ChunkGenerator p_230364_1_, TemplateManager p_230364_2_, int p_230364_3_, int p_230364_4_, Biome p_230364_5_, NoFeatureConfig p_230364_6_) {
 
-        @Override
+        }
+
+        //@Override
         public void func_230364_a_(DynamicRegistries dynamicRegistryManager, ChunkGenerator chunkGenerator, TemplateManager templateManagerIn, int chunkX, int chunkZ, Biome biomeIn, NoFeatureConfig config) {
 
             // Turns the chunk coordinates into actual coordinates we can use. (Gets center of that chunk)
@@ -154,7 +154,7 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
                     dynamicRegistryManager,
                     new VillageConfig(() -> dynamicRegistryManager.getRegistry(Registry.JIGSAW_POOL_KEY)
                             // The path to the starting Template Pool JSON file to read.
-                            .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "worldgen/tester/start_pool")), //
+                            .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "template_pool/start_pool.json")), //"tester/start_pool
 
                             // How many pieces outward from center can a recursive jigsaw structure spawn.
                             // Our structure is only 1 block out and isn't recursive so any value of 1 or more doesn't change anything.
@@ -180,15 +180,15 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
             // Structure.field_236384_t_ field will place at bottom of the house. By lifting the house up by 1 and
             // lowering the bounding box, the land at bottom of house will now stay in place instead of also being
             // raise by 1 block because the land is based on the bounding box itself.
-            this.components.forEach(piece -> piece.offset(0, 70, 0));   //70 =1
-            this.components.forEach(piece -> piece.getBoundingBox().minY -= 70);    //70 =1
+            this.components.forEach(piece -> piece.offset(0, 1, 0));   //70 =1
+            this.components.forEach(piece -> piece.getBoundingBox().minY -= 1);    //70 =1
 
 
             // Sets the bounds of the structure once you are finished.
             this.recalculateStructureSize();
 
             // I use to debug and quickly find out if the structure is spawning or not and where it is.
-            LukeleCraftMain.LOGGER.log(Level.DEBUG, "I cant believe it Fucking exists! Here retard :) : " + (blockpos.getX()) + " " + blockpos.getY() + " " + (blockpos.getZ()));
+            LukeleCraftMain.LOGGER.log(Level.DEBUG, "Here is your structure: " + (blockpos.getX()) + " " + blockpos.getY() + " " + (blockpos.getZ()));
         }
 
     }

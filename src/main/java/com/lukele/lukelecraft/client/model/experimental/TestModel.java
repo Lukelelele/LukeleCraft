@@ -1,6 +1,6 @@
-package com.lukele.lukelecraft.client.model;
+package com.lukele.lukelecraft.client.model.experimental;
 
-import com.lukele.lukelecraft.entities.TestEntity;
+import com.lukele.lukelecraft.entities.experimental.TestEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;

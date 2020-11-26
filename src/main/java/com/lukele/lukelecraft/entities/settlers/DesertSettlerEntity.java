@@ -1,4 +1,4 @@
-package com.lukele.lukelecraft.entities;
+package com.lukele.lukelecraft.entities.settlers;
 
 import com.lukele.lukelecraft.init.ModEntityTypes;
 import com.lukele.lukelecraft.init.ModItems;
@@ -9,6 +9,7 @@ import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.merchant.villager.VillagerEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.crafting.Ingredient;
@@ -23,37 +24,31 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 
-public class TestEntity extends AnimalEntity {
+public class DesertSettlerEntity extends VillagerEntity {
 
-    public static final Ingredient TEMPTATION_ITEMS = Ingredient.fromItems(ModItems.RUBY.get());
+    //public static final Ingredient TEMPTATION_ITEMS = Ingredient.fromItems(ModItems.RUBY.get());
 
-    private EatGrassGoal eatGrassGoal;
     private int testTimer;
 
-    public TestEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
+    public DesertSettlerEntity(EntityType<? extends VillagerEntity> type, World worldIn) {
         super(type, worldIn);
     }
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes(){
-        return MobEntity.registerAttributes()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 12.90)
-                .createMutableAttribute(Attributes.FOLLOW_RANGE, 10)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.250);
+        return VillagerEntity.registerAttributes()
+                .createMutableAttribute(Attributes.MAX_HEALTH, 12.9f)
+                .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE,12.90)
+                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.15);
     }
 
     @Override
     protected void registerGoals(){
         super.registerGoals();
-        this.eatGrassGoal = new EatGrassGoal(this);
         this.goalSelector.addGoal(0, new SwimGoal(this));
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.250));
-        this.goalSelector.addGoal(2, new BreedGoal(this, 1.00));
-        this.goalSelector.addGoal(3, new TemptGoal(this, 1.10, TEMPTATION_ITEMS, false));
-        this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.10));
-        this.goalSelector.addGoal(5, this.eatGrassGoal);
-        this.goalSelector.addGoal(6, new WaterAvoidingRandomWalkingGoal(this, 1.80));
-        this.goalSelector.addGoal(7, new LookAtGoal(this, PlayerEntity.class, 6.0f));
-        this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
+        this.goalSelector.addGoal(2, new WaterAvoidingRandomWalkingGoal(this, 1.80));
+        this.goalSelector.addGoal(3, new LookAtGoal(this, PlayerEntity.class, 6.0f));
+        this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
     }
 
     @Override
@@ -64,39 +59,28 @@ public class TestEntity extends AnimalEntity {
 
     @Override
     protected SoundEvent getAmbientSound(){
-        return SoundEvents.ENTITY_GHAST_DEATH;
+        return SoundEvents.ENTITY_VILLAGER_AMBIENT;
     }
 
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn){
-        return SoundEvents.ENTITY_BAT_DEATH;
+        return SoundEvents.ENTITY_VILLAGER_HURT;
     }
 
 
     @Override
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.ENTITY_PARROT_IMITATE_HOGLIN, 0.15f, 1.87f);
+        this.playSound(SoundEvents.ENTITY_ZOMBIE_VILLAGER_STEP, 0.15f, 1.87f);
     }
 
-    //.jetbrains.annotations.
+    /**.jetbrains.annotations.
     @Nullable
     //@Override
     public AgeableEntity createChild(AgeableEntity ageable) {
         return ModEntityTypes.TEST.get().create(this.world);
     }
-
-    @Override
-    protected void updateAITasks() {
-        this.testTimer = this.eatGrassGoal.getEatingGrassTimer();
-        super.updateAITasks();
-    }
-
-    //@org.jetbrains.annotations.Nullable
-    @Override
-    public AgeableEntity func_241840_a(ServerWorld p_241840_1_, AgeableEntity p_241840_2_) {
-        return null;
-    }
+*/
 
     @Override
     public void livingTick() {
