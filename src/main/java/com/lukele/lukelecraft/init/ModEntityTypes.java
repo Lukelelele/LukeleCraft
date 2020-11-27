@@ -6,6 +6,7 @@ import com.lukele.lukelecraft.entities.experimental.TestEntity;
 import com.lukele.lukelecraft.entities.settlers.DesertSettlerEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.merchant.villager.VillagerEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;

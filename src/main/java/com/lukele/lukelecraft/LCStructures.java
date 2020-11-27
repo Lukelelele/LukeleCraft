@@ -40,7 +40,7 @@ public class LCStructures {
      * Keep watch on that to know when it is safe to remove or change structure's registry names
      */
     public static final RegistryObject<Structure<NoFeatureConfig>> TESTER = setupStructure("tester", () -> (new TesterStructure(NoFeatureConfig.field_236558_a_)));
-
+    public static final RegistryObject<Structure<NoFeatureConfig>> DUNGEON = setupStructure("dungeon", () -> (new TesterStructure(NoFeatureConfig.field_236558_a_)));
     /**
      * Helper method for registering all structures
      */
@@ -59,7 +59,12 @@ public class LCStructures {
                         5 /* minimum distance apart in chunks between spawn attempts */,
                         1234567890 /* this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */),
                 true);
-
+        setupStructure(
+                DUNGEON.get(), /* The instance of the structure */
+                new StructureSeparationSettings(10 /* maximum distance apart in chunks between spawn attempts */,
+                        100 /* minimum distance apart in chunks between spawn attempts */,
+                        1234567890 /* this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */),
+                true);
         // Add more structures here and so on
     }
 

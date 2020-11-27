@@ -1,4 +1,4 @@
-/**
+
 package com.lukele.lukelecraft.world.gen;
 
 import com.lukele.lukelecraft.LukeleCraftMain;
@@ -14,7 +14,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.registries.ForgeRegistries;
-
+/**
 @Mod.EventBusSubscriber(modid= LukeleCraftMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModOreGen {
 
@@ -34,3 +34,5 @@ public class ModOreGen {
 
 }
 */
+
+

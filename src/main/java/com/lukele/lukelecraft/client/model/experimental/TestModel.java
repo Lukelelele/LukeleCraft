@@ -21,7 +21,7 @@ public class TestModel<T extends TestEntity> extends EntityModel<T> {
         textureHeight = 64;
 
         body = new ModelRenderer(this);
-        body.setRotationPoint(0.0F, 8.0F, 1.0F);
+        //body.setRotationPoint(0.0F, 8.0F, 1.0F);
         body.setTextureOffset(0, 11).addBox(-2.0F, -3.0F, -2.0F, 4.0F, 8.0F, 4.0F, 0.0F, false);
 
         head = new ModelRenderer(this);
@@ -69,7 +69,7 @@ public class TestModel<T extends TestEntity> extends EntityModel<T> {
     public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
         this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
-        this.body.rotateAngleX = ((float)Math.PI / 2F);
+        //this.body.rotateAngleX = ((float)Math.PI / 2F);
         this.rightLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         this.leftLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
         this.rightArm.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;

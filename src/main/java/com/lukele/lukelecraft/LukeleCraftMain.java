@@ -27,7 +27,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -77,12 +76,23 @@ public class LukeleCraftMain
             LCStructures.setupStructures();
             LCConfiguredStructures.registerConfiguredStructures();
         });
-    }
 
+    }
     public void biomeModification(final BiomeLoadingEvent event) {
+        //Map<String, List<String>> allBiomeBlacklists = LukeleCraftMain.getBiomeBlacklists();
         // Add our structure to all biomes including other modded biomes.
-        // You can filter to certain biomes based on stuff like temperature, scale, precipitation, mod id.
-        event.getGeneration().getStructures().add(() -> LCConfiguredStructures.CONFIGURED_TESTER);
+        // You can skip or add only to certain biomes based on stuff like biome category,
+        // temperature, scale, precipitation, mod id, etc. All kinds of options!
+        //
+        // You can even use the BiomeDictionary as well! To use BiomeDictionary, do
+        // RegistryKey.getOrCreateKey(Registry.BIOME_KEY, event.getName()) to get the biome's
+        // registrykey. Then that can be fed into the dictionary to get the biome's types.
+        //for (Biome biome : ForgeRegistries.BIOMES) {
+            //if (biome == biome.OCEAN) {
+                event.getGeneration().getStructures().add(() -> LCConfiguredStructures.CONFIGURED_TESTER);
+                event.getGeneration().getStructures().add(() -> LCConfiguredStructures.CONFIGURED_DUNGEON);
+            //}
+       // }
     }
 
     public void addDimensionalSpacing(final WorldEvent.Load event) {
@@ -102,6 +112,11 @@ public class LukeleCraftMain
             serverWorld.getChunkProvider().generator.func_235957_b_().field_236193_d_ = tempMap;
         }
     }
+/**
+    private static boolean isBiomeAllowed(String structureType, ResourceLocation biomeID, Map<String, List<String>> allBiomeBlacklists){
+        return allBiomeBlacklists.get(structureType).stream().noneMatch(blacklistedBiome -> blacklistedBiome.equals(biomeID.toString()));
+    }
+*/
 
     //NEW CREATIVE TABS
     public static final ItemGroup TAB = new ItemGroup("lukelecraftTab"){

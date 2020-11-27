@@ -74,7 +74,7 @@ public class DesertSettlerEntity extends VillagerEntity {
 
     @Override
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.ENTITY_ZOMBIE_VILLAGER_STEP, 0.15f, 1.87f);
+        this.playSound(SoundEvents.ENTITY_SHEEP_STEP, 0.15f, 1.87f);
     }
 
     /**.jetbrains.annotations.

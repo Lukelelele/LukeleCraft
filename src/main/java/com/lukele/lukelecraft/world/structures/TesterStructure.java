@@ -2,6 +2,7 @@ package com.lukele.lukelecraft.world.structures;
 
 
 import com.google.common.collect.ImmutableList;
+import com.lukele.lukelecraft.LCConfiguredStructures;
 import com.lukele.lukelecraft.LukeleCraftMain;
 import com.mojang.serialization.Codec;
 
@@ -31,6 +32,7 @@ import net.minecraft.world.gen.feature.structure.StructureStart;
 
 import net.minecraft.world.gen.feature.structure.VillageConfig;
 import net.minecraft.world.gen.feature.template.TemplateManager;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import org.apache.logging.log4j.Level;
 
 import javax.annotation.Nullable;
@@ -120,11 +122,12 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
      * If you check for the dimension there and do not add your structure's
      * spacing into the chunk generator, the structure will not spawn in that dimension!
      */
-  @Override
-   protected boolean func_230363_a_(ChunkGenerator chunkGenerator, BiomeProvider biomeSource, long seed, SharedSeedRandom chunkRandom, int chunkX, int chunkZ, Biome biome, ChunkPos chunkPos, NoFeatureConfig featureConfig) {
-        int landHeight = chunkGenerator.getNoiseHeight(chunkX << 4, chunkZ << 4, Heightmap.Type.WORLD_SURFACE_WG);
-        return landHeight > 50; //100
-    }
+
+//  @Override
+//   protected boolean func_230363_a_(ChunkGenerator chunkGenerator, BiomeProvider biomeSource, long seed, SharedSeedRandom chunkRandom, int chunkX, int chunkZ, Biome biome, ChunkPos chunkPos, NoFeatureConfig featureConfig) {
+//        int landHeight = chunkGenerator.getNoiseHeight(chunkX << 4, chunkZ << 4, Heightmap.Type.WORLD_SURFACE_WG);
+//        return landHeight > 100; //100
+//    }
 
 
     /**
@@ -146,7 +149,7 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
             // Turns the chunk coordinates into actual coordinates we can use. (Gets center of that chunk)
             int x = (chunkX << 4) + 7;
             int z = (chunkZ << 4) + 7;
-            BlockPos blockpos = new BlockPos(x, 1, z); //y1
+            BlockPos blockpos = new BlockPos(x, 0, z); //y1
 
             // All a structure has to do is call this method to turn it into a jigsaw based structure! JIGSAW CODE
 
@@ -154,7 +157,7 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
                     dynamicRegistryManager,
                     new VillageConfig(() -> dynamicRegistryManager.getRegistry(Registry.JIGSAW_POOL_KEY)
                             // The path to the starting Template Pool JSON file to read.
-                            .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "start_pool")),
+                            .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "tester_pool/start_pool")),
 //                          .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "start_pool")),
                             // How many pieces outward from center can a recursive jigsaw structure spawn.
                             // Our structure is only 1 block out and isn't recursive so any value of 1 or more doesn't change anything.

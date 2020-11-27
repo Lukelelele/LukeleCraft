@@ -8,7 +8,6 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.util.math.MathHelper;
 
 public class EvilModel<T extends EvilEntity> extends EntityModel<T> {
-
     private final ModelRenderer leftLeg;
     private final ModelRenderer rightLeg;
     private final ModelRenderer leftArm;
@@ -23,8 +22,6 @@ public class EvilModel<T extends EvilEntity> extends EntityModel<T> {
         leftLeg = new ModelRenderer(this);
         leftLeg.setRotationPoint(5.0F, 10.0F, 0.0F);
         leftLeg.setTextureOffset(20, 43).addBox(-12.0F, 0.0F, -2.0F, 5.0F, 14.0F, 5.0F, 0.0F, false);
-        leftLeg.setTextureOffset(4, 4).addBox(0.0F, -24.0F, 0.0F, 1.0F, 6.0F, 1.0F, 0.0F, false);
-        leftLeg.setTextureOffset(0, 0).addBox(-11.0F, -24.0F, 0.0F, 1.0F, 6.0F, 1.0F, 0.0F, false);
 
         rightLeg = new ModelRenderer(this);
         rightLeg.setRotationPoint(-4.0F, 10.0F, 0.0F);
@@ -39,16 +36,20 @@ public class EvilModel<T extends EvilEntity> extends EntityModel<T> {
         rightArm.setTextureOffset(23, 26).addBox(-2.0F, -1.0F, -14.0F, 2.0F, 2.0F, 15.0F, 0.0F, false);
 
         body = new ModelRenderer(this);
-        //body.setRotationPoint(0.0F, -2.0F, 0.0F);
+        body.setRotationPoint(0.0F, -2.0F, 0.0F);
         body.setTextureOffset(0, 0).addBox(-6.0F, -1.0F, -5.0F, 12.0F, 13.0F, 11.0F, 0.0F, false);
 
         head = new ModelRenderer(this);
         head.setRotationPoint(0.0F, -3.0F, 0.0F);
         head.setTextureOffset(0, 24).addBox(-5.0F, -8.0F, -4.0F, 10.0F, 8.0F, 9.0F, 0.0F, false);
-
-
-
+        head.setTextureOffset(0, 0).addBox(-6.0F, -11.0F, 0.0F, 1.0F, 6.0F, 1.0F, 0.0F, false);
+        head.setTextureOffset(4, 4).addBox(5.0F, -11.0F, 0.0F, 1.0F, 6.0F, 1.0F, 0.0F, false);
     }
+/**
+    @Override
+    public void setRotationAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch){
+        //previously the render function, render code was moved to a method below
+    }*/
 
     @Override
     public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
@@ -64,16 +65,10 @@ public class EvilModel<T extends EvilEntity> extends EntityModel<T> {
         modelRenderer.rotateAngleX = x;
         modelRenderer.rotateAngleY = y;
         modelRenderer.rotateAngleZ = z;
+    }
 
-}
     @Override
     public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
-        this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
-        //this.body.rotateAngleX = ((float)Math.PI / 2F);
-        this.rightLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        this.leftLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
-        this.rightArm.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
-        this.leftArm.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+
     }
 }
