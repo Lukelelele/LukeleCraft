@@ -109,6 +109,7 @@ public class LukeleCraftMain
 
             Map<Structure<?>, StructureSeparationSettings> tempMap = new HashMap<>(serverWorld.getChunkProvider().generator.func_235957_b_().func_236195_a_());
             tempMap.put(LCStructures.TESTER.get(), DimensionStructuresSettings.field_236191_b_.get(LCStructures.TESTER.get()));
+            tempMap.put(LCStructures.DUNGEON.get(), DimensionStructuresSettings.field_236191_b_.get(LCStructures.DUNGEON.get()));
             serverWorld.getChunkProvider().generator.func_235957_b_().field_236193_d_ = tempMap;
         }
     }

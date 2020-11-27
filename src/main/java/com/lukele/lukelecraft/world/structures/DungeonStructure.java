@@ -36,11 +36,11 @@ public class DungeonStructure extends Structure<NoFeatureConfig> {
 
     @Override
     public GenerationStage.Decoration getDecorationStage() {
-        return GenerationStage.Decoration.STRONGHOLDS;
+        return GenerationStage.Decoration.UNDERGROUND_STRUCTURES;
     }
 
 
-
+/**
     private static final List<MobSpawnInfo.Spawners> STRUCTURE_MONSTERS = ImmutableList.of(
             new MobSpawnInfo.Spawners(EntityType.ILLUSIONER, 100, 4, 9),
             new MobSpawnInfo.Spawners(EntityType.VINDICATOR, 100, 4, 9)
@@ -58,7 +58,7 @@ public class DungeonStructure extends Structure<NoFeatureConfig> {
     public List<MobSpawnInfo.Spawners> getDefaultCreatureSpawnList() {
         return STRUCTURE_CREATURES;
     }
-
+*/
     public static class Start extends StructureStart<NoFeatureConfig>  {
         public Start(Structure<NoFeatureConfig> structureIn, int chunkX, int chunkZ, MutableBoundingBox mutableBoundingBox, int referenceIn, long seedIn) {
             super(structureIn, chunkX, chunkZ, mutableBoundingBox, referenceIn, seedIn);
@@ -79,7 +79,7 @@ public class DungeonStructure extends Structure<NoFeatureConfig> {
             JigsawManager.func_242837_a(
                     dynamicRegistryManager,
                     new VillageConfig(() -> dynamicRegistryManager.getRegistry(Registry.JIGSAW_POOL_KEY)
-                            .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "dungeon_pool/start_pool")),
+                            .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "dungeon_pool/start_dcore_pool")),
                             1),
                     AbstractVillagePiece::new,
                     chunkGenerator,

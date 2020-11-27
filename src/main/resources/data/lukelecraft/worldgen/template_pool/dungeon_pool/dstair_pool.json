@@ -1,11 +1,11 @@
 {
-  "name": "lukelecraft:dungeon/dstair_pool",
+  "name": "lukelecraft:dstair_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "lukelecraft:dungeon/dstair",
+        "location": "lukelecraft:dungeon_nbt/dstair",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -16,7 +16,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "lukelecraft:dungeon/dladder",
+        "location": "lukelecraft:dungeon_nbt/dladder",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

@@ -157,7 +157,7 @@ public class TesterStructure extends Structure<NoFeatureConfig> {
                     dynamicRegistryManager,
                     new VillageConfig(() -> dynamicRegistryManager.getRegistry(Registry.JIGSAW_POOL_KEY)
                             // The path to the starting Template Pool JSON file to read.
-                            .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "tester_pool/start_pool")),
+                            .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "tester_pool/start_house_near_tree_pool")),
 //                          .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "start_pool")),
                             // How many pieces outward from center can a recursive jigsaw structure spawn.
                             // Our structure is only 1 block out and isn't recursive so any value of 1 or more doesn't change anything.

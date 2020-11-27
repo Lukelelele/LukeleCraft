@@ -1,11 +1,11 @@
 {
-  "name": "lukelecraft:dhall_pool",
+  "name": "lukelecraft:start_dcore_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "lukelecraft:dungeon_nbt/dfork_hall",
+        "location": "lukelecraft:dungeon_nbt/dcore",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

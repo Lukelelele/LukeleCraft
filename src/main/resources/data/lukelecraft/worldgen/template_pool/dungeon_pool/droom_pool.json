@@ -1,11 +1,11 @@
 {
-  "name": "lukelecraft:dungeon/droom_pool",
+  "name": "lukelecraft:droom_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "lukelecraft:dungeon/dmaze_one",
+        "location": "lukelecraft:dungeon_nbt/dmaze_one",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
