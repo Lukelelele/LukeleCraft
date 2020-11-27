@@ -1,5 +1,5 @@
 {
-  "name": "lukelecraft:start_dcore_pool",
+  "name": "lukelecraft:dungeon_pool/start_dcore_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {

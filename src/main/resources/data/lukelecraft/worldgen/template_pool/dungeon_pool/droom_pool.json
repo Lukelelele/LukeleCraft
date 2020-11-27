@@ -1,5 +1,5 @@
 {
-  "name": "lukelecraft:droom_pool",
+  "name": "lukelecraft:dungeon_pool/droom_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {

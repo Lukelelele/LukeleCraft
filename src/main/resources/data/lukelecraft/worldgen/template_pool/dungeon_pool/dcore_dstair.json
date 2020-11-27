@@ -1,5 +1,5 @@
 {
-  "name": "lukelecraft:dcore_dstair",
+  "name": "lukelecraft:dungeon_pool/dcore_dstair",
   "fallback": "minecraft:empty",
   "elements": [
     {

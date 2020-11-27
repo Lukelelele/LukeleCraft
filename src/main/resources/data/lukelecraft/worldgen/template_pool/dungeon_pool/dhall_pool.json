@@ -1,5 +1,5 @@
 {
-  "name": "lukelecraft:dhall_pool",
+  "name": "lukelecraft:dungeon_pool/dhall_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {

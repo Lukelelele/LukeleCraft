@@ -1,5 +1,5 @@
 {
-  "name": "lukelecraft:dstair_pool",
+  "name": "lukelecraft:dungeon_pool/dstair_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
@@ -10,19 +10,6 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
-
-    },
-
-    {
-      "weight": 1,
-      "element": {
-        "location": "lukelecraft:dungeon_nbt/dladder",
-        "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-
     }
-
   ]
 }

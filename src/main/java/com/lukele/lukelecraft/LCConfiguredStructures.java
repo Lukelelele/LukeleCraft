@@ -11,7 +11,7 @@ public class LCConfiguredStructures {
     /**
      * Static instance of our structure so we can reference it and add it to biomes easily.
      */
-    public static StructureFeature<?, ?> CONFIGURED_TESTER = LCStructures.TESTER.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG);
+
     public static StructureFeature<?, ?> CONFIGURED_DUNGEON = LCStructures.DUNGEON.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG);
     /**
      * Registers the configured structure which is what gets added to the biomes.
@@ -22,7 +22,7 @@ public class LCConfiguredStructures {
      */
     public static void registerConfiguredStructures() {
         Registry<StructureFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE;
-        Registry.register(registry, new ResourceLocation(LukeleCraftMain.MOD_ID, "configured_tester"), CONFIGURED_TESTER);
+
         Registry.register(registry, new ResourceLocation(LukeleCraftMain.MOD_ID, "configured_dungeon"), CONFIGURED_DUNGEON);
 
         // Ok so, this part may be hard to grasp but basically, just add your structure to this to
@@ -37,7 +37,7 @@ public class LCConfiguredStructures {
         // in StructureTutorialMain.addDimensionalSpacing and then create a superflat world, exit it,
         // and re-enter it and your structures will be spawning. I could not figure out why it needs
         // the restart but honestly, superflat is really buggy and shouldn't be your main focus in my opinion.
-        FlatGenerationSettings.STRUCTURES.put(LCStructures.TESTER.get(), CONFIGURED_TESTER);
+
         FlatGenerationSettings.STRUCTURES.put(LCStructures.DUNGEON.get(), CONFIGURED_DUNGEON);
     }
 }

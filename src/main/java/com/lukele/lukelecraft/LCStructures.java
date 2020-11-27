@@ -3,7 +3,6 @@ package com.lukele.lukelecraft;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.lukele.lukelecraft.world.structures.DungeonStructure;
-import com.lukele.lukelecraft.world.structures.TesterStructure;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.feature.structure.Structure;
 import net.minecraft.world.gen.settings.DimensionStructuresSettings;
@@ -40,7 +39,7 @@ public class LCStructures {
      * Forge has an issue report here: https://github.com/MinecraftForge/MinecraftForge/issues/7363
      * Keep watch on that to know when it is safe to remove or change structure's registry names
      */
-    public static final RegistryObject<Structure<NoFeatureConfig>> TESTER = setupStructure("tester", () -> (new TesterStructure(NoFeatureConfig.field_236558_a_)));
+
     public static final RegistryObject<Structure<NoFeatureConfig>> DUNGEON = setupStructure("dungeon", () -> (new DungeonStructure(NoFeatureConfig.field_236558_a_)));
     /**
      * Helper method for registering all structures
@@ -54,12 +53,7 @@ public class LCStructures {
      * See the comments in below for more details.
      */
     public static void setupStructures() {
-        setupStructure(
-                TESTER.get(), /* The instance of the structure */
-                new StructureSeparationSettings(10 /* maximum distance apart in chunks between spawn attempts */,
-                        5 /* minimum distance apart in chunks between spawn attempts */,
-                        1234567890 /* this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */),
-                true);
+
         setupStructure(
                 DUNGEON.get(), /* The instance of the structure */
                 new StructureSeparationSettings(10 /* maximum distance apart in chunks between spawn attempts */,
