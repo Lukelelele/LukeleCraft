@@ -1,0 +1,87 @@
+{
+  "name": "lukelecraft:dungeon_pool/combined_pool/dhall_dstair",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/dhall_fork",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/dhall_fourway",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/dhall_trap",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/dhall_web",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/dstair_right",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/dstair_left",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/dstair_back",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/dstair_ramp",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    }
+
+  ]
+}

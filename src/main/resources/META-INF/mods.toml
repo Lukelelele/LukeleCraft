@@ -17,7 +17,7 @@ issueTrackerURL="http://my.issue.tracker/" #optional
 # The modid of the mod
 modId="lukelecraft" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="1.6.1-1.0.0" #mandatory
+version="1.6.3-1.0.0" #mandatory
  # A display name for the mod
 displayName="Lukele Craft" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
@@ -27,12 +27,13 @@ displayURL="http://example.com/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks to Java!" #optional
+credits="Thanks everyone who gave me tips and advice!" #optional
 # A text field displayed in the mod UI
 authors="Lukele" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 My First Ever Mod!
+Adds new structures to your world.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.examplemod]] #optional

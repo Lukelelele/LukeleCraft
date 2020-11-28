@@ -1,0 +1,107 @@
+{
+  "name": "lukelecraft:dungeon_pool/combined_pool/droom_dhall",
+  "fallback": "minecraft:empty",
+  "elements": [
+
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/dhall_fork",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/dhall_fourway",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/dhall_trap",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/dhall_web",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/droom_armory",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/droom_base",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/droom_collapse",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/droom_library",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/droom_music",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "lukelecraft:dungeon_nbt/droom_prison",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+
+    }
+  ]
+}

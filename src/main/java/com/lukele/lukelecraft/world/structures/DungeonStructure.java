@@ -40,7 +40,7 @@ public class DungeonStructure extends Structure<NoFeatureConfig> {
     }
 
 
-/**
+
     private static final List<MobSpawnInfo.Spawners> STRUCTURE_MONSTERS = ImmutableList.of(
             new MobSpawnInfo.Spawners(EntityType.ILLUSIONER, 100, 4, 9),
             new MobSpawnInfo.Spawners(EntityType.VINDICATOR, 100, 4, 9)
@@ -49,7 +49,7 @@ public class DungeonStructure extends Structure<NoFeatureConfig> {
     public List<MobSpawnInfo.Spawners> getDefaultSpawnList() {
         return STRUCTURE_MONSTERS;
     }
-
+/**
     private static final List<MobSpawnInfo.Spawners> STRUCTURE_CREATURES = ImmutableList.of(
             new MobSpawnInfo.Spawners(EntityType.SHEEP, 30, 10, 15),
             new MobSpawnInfo.Spawners(EntityType.RABBIT, 100, 1, 2)
@@ -79,7 +79,7 @@ public class DungeonStructure extends Structure<NoFeatureConfig> {
             JigsawManager.func_242837_a(
                     dynamicRegistryManager,
                     new VillageConfig(() -> dynamicRegistryManager.getRegistry(Registry.JIGSAW_POOL_KEY)
-                            .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "dungeon_pool/start_dcore_pool")),
+                            .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "dungeon_pool/dstart_pool")),
                             1),
                     AbstractVillagePiece::new,
                     chunkGenerator,

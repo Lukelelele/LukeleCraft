@@ -1,15 +1,16 @@
 {
-  "name": "lukelecraft:dungeon_pool/dstair_pool",
+  "name": "lukelecraft:dungeon_pool/dstart_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "lukelecraft:dungeon_nbt/dstair",
+        "location": "lukelecraft:dungeon_nbt/droom_boss",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+
     }
   ]
 }
