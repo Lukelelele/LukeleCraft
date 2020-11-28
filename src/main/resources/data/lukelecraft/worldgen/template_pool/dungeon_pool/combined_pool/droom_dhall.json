@@ -9,7 +9,7 @@
         "location": "lukelecraft:dungeon_nbt/dhall_fork",
         "processors": "minecraft:empty",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "minecraft:legacy_single_pool_element"
       }
 
     },
@@ -19,7 +19,7 @@
         "location": "lukelecraft:dungeon_nbt/dhall_fourway",
         "processors": "minecraft:empty",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "minecraft:legacy_single_pool_element"
       }
 
     },
@@ -29,7 +29,7 @@
         "location": "lukelecraft:dungeon_nbt/dhall_trap",
         "processors": "minecraft:empty",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "minecraft:legacy_single_pool_element"
       }
 
     },
@@ -39,7 +39,7 @@
         "location": "lukelecraft:dungeon_nbt/dhall_web",
         "processors": "minecraft:empty",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "minecraft:legacy_single_pool_element"
       }
 
     },
@@ -49,7 +49,7 @@
         "location": "lukelecraft:dungeon_nbt/droom_armory",
         "processors": "minecraft:empty",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "minecraft:legacy_single_pool_element"
       }
 
     },
@@ -59,7 +59,7 @@
         "location": "lukelecraft:dungeon_nbt/droom_base",
         "processors": "minecraft:empty",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "minecraft:legacy_single_pool_element"
       }
 
     },
@@ -69,7 +69,7 @@
         "location": "lukelecraft:dungeon_nbt/droom_collapse",
         "processors": "minecraft:empty",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "minecraft:legacy_single_pool_element"
       }
 
     },
@@ -79,7 +79,7 @@
         "location": "lukelecraft:dungeon_nbt/droom_library",
         "processors": "minecraft:empty",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "minecraft:legacy_single_pool_element"
       }
 
     },
@@ -89,7 +89,7 @@
         "location": "lukelecraft:dungeon_nbt/droom_music",
         "processors": "minecraft:empty",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "minecraft:legacy_single_pool_element"
       }
 
     },
@@ -99,7 +99,7 @@
         "location": "lukelecraft:dungeon_nbt/droom_prison",
         "processors": "minecraft:empty",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "minecraft:legacy_single_pool_element"
       }
 
     }

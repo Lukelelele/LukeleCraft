@@ -36,7 +36,7 @@ public class DungeonStructure extends Structure<NoFeatureConfig> {
 
     @Override
     public GenerationStage.Decoration getDecorationStage() {
-        return GenerationStage.Decoration.UNDERGROUND_STRUCTURES;
+        return GenerationStage.Decoration.STRONGHOLDS;
     }
 
 
