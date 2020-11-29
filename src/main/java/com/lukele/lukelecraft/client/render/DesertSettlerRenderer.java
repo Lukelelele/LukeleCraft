@@ -1,7 +1,7 @@
 package com.lukele.lukelecraft.client.render;
 
 import com.lukele.lukelecraft.LukeleCraftMain;
-import com.lukele.lukelecraft.client.model.DesertSettlerModel;
+import com.lukele.lukelecraft.client.entity.model.DesertSettlerModel;
 import com.lukele.lukelecraft.entities.settlers.DesertSettlerEntity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;

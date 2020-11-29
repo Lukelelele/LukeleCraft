@@ -1,11 +1,10 @@
-package com.lukele.lukelecraft.client.model.experimental;
+package com.lukele.lukelecraft.client.entity.model.experimental;
 
 import com.lukele.lukelecraft.entities.experimental.EvilEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraft.util.math.MathHelper;
 
 public class EvilModel<T extends EvilEntity> extends EntityModel<T> {
     private final ModelRenderer leftLeg;

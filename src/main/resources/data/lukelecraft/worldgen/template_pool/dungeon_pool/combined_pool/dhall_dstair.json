@@ -33,7 +33,7 @@
 
     },
     {
-      "weight": 10,
+      "weight": 7,
       "element": {
         "location": "lukelecraft:dungeon_nbt/dhall_web",
         "processors": "minecraft:empty",

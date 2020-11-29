@@ -36,14 +36,16 @@ public class DungeonStructure extends Structure<NoFeatureConfig> {
 
     @Override
     public GenerationStage.Decoration getDecorationStage() {
-        return GenerationStage.Decoration.STRONGHOLDS;
+        return GenerationStage.Decoration.SURFACE_STRUCTURES;
     }
 
 
 
     private static final List<MobSpawnInfo.Spawners> STRUCTURE_MONSTERS = ImmutableList.of(
-            new MobSpawnInfo.Spawners(EntityType.ILLUSIONER, 100, 4, 9),
-            new MobSpawnInfo.Spawners(EntityType.VINDICATOR, 100, 4, 9)
+            new MobSpawnInfo.Spawners(EntityType.ILLUSIONER, 10, 3, 15),
+            new MobSpawnInfo.Spawners(EntityType.VINDICATOR, 10, 3, 15),
+            new MobSpawnInfo.Spawners(EntityType.RAVAGER, 10, 3, 15),
+            new MobSpawnInfo.Spawners(EntityType.EVOKER, 10, 3, 15)
     );
     @Override
     public List<MobSpawnInfo.Spawners> getDefaultSpawnList() {
@@ -80,7 +82,7 @@ public class DungeonStructure extends Structure<NoFeatureConfig> {
                     dynamicRegistryManager,
                     new VillageConfig(() -> dynamicRegistryManager.getRegistry(Registry.JIGSAW_POOL_KEY)
                             .getOrDefault(new ResourceLocation(LukeleCraftMain.MOD_ID, "dungeon_pool/dstart_pool")),
-                            1),
+                            15),   /**THIS NUMBER IS HOW MANY PIECES/SEGMENTS WILL SPAWN*/
                     AbstractVillagePiece::new,
                     chunkGenerator,
                     templateManagerIn,

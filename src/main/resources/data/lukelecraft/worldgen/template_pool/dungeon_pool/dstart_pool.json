@@ -3,7 +3,7 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 1,
+      "weight": 10,
       "element": {
         "location": "lukelecraft:dungeon_nbt/droom_boss",
         "processors": "minecraft:empty",

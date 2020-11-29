@@ -1,7 +1,7 @@
 package com.lukele.lukelecraft.client.render.experimental;
 
 import com.lukele.lukelecraft.LukeleCraftMain;
-import com.lukele.lukelecraft.client.model.experimental.TestModel;
+import com.lukele.lukelecraft.client.entity.model.experimental.TestModel;
 import com.lukele.lukelecraft.entities.experimental.TestEntity;
 
 import net.minecraft.client.renderer.entity.EntityRendererManager;

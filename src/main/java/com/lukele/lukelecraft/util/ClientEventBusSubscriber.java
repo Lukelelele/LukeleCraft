@@ -1,6 +1,7 @@
 package com.lukele.lukelecraft.util;
 
 import com.lukele.lukelecraft.LukeleCraftMain;
+import com.lukele.lukelecraft.client.render.DBossRenderer;
 import com.lukele.lukelecraft.client.render.DesertSettlerRenderer;
 import com.lukele.lukelecraft.client.render.experimental.EvilRenderer;
 import com.lukele.lukelecraft.client.render.experimental.TestRenderer;
@@ -20,6 +21,7 @@ public class ClientEventBusSubscriber {
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.EVIL.get(), EvilRenderer::new);
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.DESERTSETTLER.get(), DesertSettlerRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.DBOSS.get(), DBossRenderer::new);
     }
 
 

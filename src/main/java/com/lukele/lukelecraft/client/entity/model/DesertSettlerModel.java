@@ -1,4 +1,4 @@
-package com.lukele.lukelecraft.client.model;
+package com.lukele.lukelecraft.client.entity.model;
 
 import com.lukele.lukelecraft.entities.settlers.DesertSettlerEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;

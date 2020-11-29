@@ -28,6 +28,10 @@ public class ModEntityTypes {
             () -> EntityType.Builder.create(EvilEntity::new, EntityClassification.CREATURE)
                     .size(1.0f, 5.0f)
                     .build(new ResourceLocation(LukeleCraftMain.MOD_ID, "evil").toString()));
+    public static final RegistryObject<EntityType<EvilEntity>> DBOSS = ENTITY_TYPES.register("dboss",
+            () -> EntityType.Builder.create(EvilEntity::new, EntityClassification.MONSTER)
+                    .size(1.0f, 2.5f)
+                    .build(new ResourceLocation(LukeleCraftMain.MOD_ID, "dboss").toString()));
 
     //Villager Mob
 public static final RegistryObject<EntityType<DesertSettlerEntity>> DESERTSETTLER = ENTITY_TYPES.register("desertsettler",

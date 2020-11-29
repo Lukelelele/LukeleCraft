@@ -1,4 +1,4 @@
-package com.lukele.lukelecraft.client.model.experimental;
+package com.lukele.lukelecraft.client.entity.model.experimental;
 
 import com.lukele.lukelecraft.entities.experimental.TestEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;

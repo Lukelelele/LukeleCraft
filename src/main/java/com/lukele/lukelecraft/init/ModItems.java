@@ -37,4 +37,6 @@ public class ModItems {
     //Block Items
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItemBase(ModBlocks.RUBY_BLOCK.get()));
     public static final RegistryObject<Item> BIT_BLOCK_ITEM = ITEMS.register("bit_block", () -> new BlockItemBase(ModBlocks.BIT_BLOCK.get()));
+    /** DUNGEON */
+    public static final RegistryObject<Item> DTRAP_BLOCK_ITEM = ITEMS.register("dtrap_block", () -> new BlockItemBase(ModBlocks.DTRAP_BLOCK.get()));
 }

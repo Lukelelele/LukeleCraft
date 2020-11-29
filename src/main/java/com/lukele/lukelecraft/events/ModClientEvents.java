@@ -17,9 +17,18 @@ public class ModClientEvents {
     public static void onJumpWithStick(LivingEvent.LivingJumpEvent event) {
         LivingEntity player = event.getEntityLiving();
         if (player.getHeldItemMainhand().getItem() == Items.STICK) {
-        LukeleCraftMain.LOGGER.info("Player tried to jump with a stick!");
+            LukeleCraftMain.LOGGER.info("Player tried to jump with a stick!");
             World world = player.getEntityWorld();
-            world.setBlockState(player.getPosition().add( 0, -1, 0), ModBlocks.RUBY_BLOCK.get().getDefaultState()); //Changed getPosition() -> func_233580_cy_
+            world.setBlockState(player.getPosition().add(0, -1, 0), ModBlocks.RUBY_BLOCK.get().getDefaultState()); //Changed getPosition() -> func_233580_cy_
+        }
+
+        public static void onDTrapStep(LivingEvent.LivingJumpEvent event) {
+            LivingEntity player = event.getEntityLiving();
+            if (player.getHeldItemMainhand().getItem() == Items.STICK) {
+                LukeleCraftMain.LOGGER.info("Player stepped on a trap!");
+                World world = player.getEntityWorld();
+                //world.setBlockState(player.getPosition().add(0, -1, 0), ModBlocks.RUBY_BLOCK.get().getDefaultState()); //Changed getPosition() -> func_233580_cy_
+            }
         }
     }
 }
